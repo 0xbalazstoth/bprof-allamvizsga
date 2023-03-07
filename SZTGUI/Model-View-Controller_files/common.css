@@ -1,0 +1,139 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #555;
+    font: normal 10pt Arial,Helvetica,sans-serif;
+    background: #EFEFEF url("../img/bg.png") repeat 0 0;
+}
+
+#page {
+    width: 960px;
+    min-height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#header {
+    height: 60px;
+}
+
+#logo {
+    float: left;
+    padding-top: 5px;
+}
+
+#menu {
+
+    padding-top: 27px;
+}
+
+#menu nav,
+#menu .nav {
+    float: right;
+    display: block;
+    height: 35px;
+    width: 600px;
+    background: url("../img/menu-bg.png") transparent no-repeat 0 0;
+    padding: 8px 0px;
+    font-size: 14px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+#menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 15px;
+}
+
+#menu a:hover {
+    color: yellow;
+}
+
+#content {
+    margin-top: 2px;
+    background: white;
+    border: 1px solid #C9E0ED;
+    min-height: 500px;
+    padding: 10px 20px;
+}
+
+#footer {
+    background: url("../img/footer-bg.png") repeat scroll 0 0 #202020;
+    color: #CCCCCC;
+    font-size: 0.9em;
+    padding: 20px 0;
+    text-align: center;
+}
+
+#content {
+    text-align: justify;
+}
+
+h1 {
+    margin: 10px 0px;
+    font-size: 24px;
+}
+
+section h1 {
+    font-size: 18px;
+}
+
+h2 {
+    font-size: 18px;
+    margin: 10px 0px;
+}
+
+ul, ol {
+    padding-left: 30px;
+}
+
+li {
+    margin: 5px 0px;
+}
+
+a {
+    color: blue;
+}
+
+a:visited {
+    color: #3a6985;
+}
+
+table, th, td
+{
+    border: 1px solid lightgray;
+}
+
+img {
+    display: block;   
+    margin-left: auto;
+    margin-right: auto;
+}
+
+video {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.frameworks {
+    display: block;
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.frameworks img {
+    display: inline;
+    margin: 20px;
+}

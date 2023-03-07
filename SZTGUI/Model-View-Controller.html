@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- saved from url=(0042)https://people.inf.elte.hu/csubix/mvc.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Model-View-Controller</title>
+	
+	<link rel="stylesheet" type="text/css" href="./Model-View-Controller_files/common.css">
+	<script type="text/javascript" src="./Model-View-Controller_files/jquery-1.7.2.min.js.letöltés"></script>
+	<script type="text/javascript" src="./Model-View-Controller_files/lightbox.js.letöltés"></script>
+	<link href="./Model-View-Controller_files/lightbox.css" rel="stylesheet">
+    <link rel="prefetch"></head>
+    <body>
+	<div id="page">
+	    <div id="header">
+		<div id="logo">
+		    <a href="https://people.inf.elte.hu/csubix/index.html"><img src="./Model-View-Controller_files/logo.png" alt="Kezdőlap"></a>
+		</div>
+		<div id="menu">
+		    <div class="nav">
+			<a href="https://people.inf.elte.hu/csubix/index.html">Yii keretrendszer</a> |
+			<a href="https://people.inf.elte.hu/csubix/mvc.html">MVC</a> |
+			<a href="https://people.inf.elte.hu/csubix/compare.html">Összehasonlítás</a> |
+			<a href="https://people.inf.elte.hu/csubix/introduce.html">Bemutató</a> |
+			<a href="https://people.inf.elte.hu/csubix/form.html">Kérdőív</a>
+		    </div>
+		</div>
+	    </div>
+	    <div id="content">
+		<h1>MVC Model-View-Controller avagy Modell-Nézet-Vezérlő</h1>
+		<h2>Model-View-Controller (MVC)</h2>
+		<p>A Yii a model-view-controller (MVC / modell-nézet-kontroller/vezérlő) tervezési mintát valósítja meg, ami webprogramozás terén széleskörűen alkalmazott. Az MVC célja elválasztani az üzleti logikát a felhasználói felülettel kapcsolatos elgondolásoktól oly módon, hogy a fejlesztők minél könnyebben változtathassák meg az egyes részeket anélkül, hogy a többire hatással lennének. Az MVC mintában
+		a modell képviseli az információt (adatot) és az üzleti logikát; a nézet tartalmazza a felhasználói felület elemeit, úgy mint szövegek, űrlapok; a kontroller/vezérlő pedig kezeli a modell és a nézet közti párbeszédet.
+		Az MVC mellett a Yii a 'front-controller'-t, más néven alkalmazást, is bevezeti, ami a felhasználói kérések feldolgozásához biztosít végrehajtási környezetet. Az alkalmazás feloldja a felhasználói kérést, majd továbbítja a megfelelő kontrollernek további feldolgozásra.</p>
+		A következő ábra egy Yii alkalmazás statikus felépítését mutatja:
+		<a href="./Model-View-Controller_files/mvc1.png" rel="lightbox" title="Egy Yii alkalmazás statikus felépítése"><img src="./Model-View-Controller_files/mvc1.png" alt="Egy Yii alkalmazás statikus felépítése"></a>
+
+		<h2>Egy tipikus munkafolymat</h2>
+		A következő ábra egy tipikus munkafolyamatot mutat, aminek során a Yii alklamzás egy felhasználói kérést kezel:
+		<a href="./Model-View-Controller_files/mvc2.png" rel="lightbox" title="Egy Yii alklamazás tipikus munkafolyamata"><img src="./Model-View-Controller_files/mvc2.png" alt="Egy Yii alklamazás tipikus munkafolyamata"></a>
+		<ol>
+		    <li>A felhasználó kérést intéz a következő URL-lel `http://www.example.com/index.php?r=post/show&amp;id=1` a webszerver pedig a kérést kezelendő, végrehajtja a rendszertöltő `index.php` szkriptet.</li>
+		    <li>A rendszertöltő szkript létrehoz egy alkalmazás példányt, és futtatja.</li>
+		    <li>Az alkalmazás részletes információt kap a felhasználói kérésről a `request` nevű alkalmazás komponens-től.</li>
+		    <li>Az alklamazás meghatározza a kért kontroller-t és tevékenységet egy `urlManager` nevű alkalmazás komponens segítségével. A jelenlegi példában ez a `post` kontrollert jelenti, ami a `PostController` osztályra hivatkozik; a tevékenység pedig `show`, aminek a tényleges jelentését a kontroller határozza meg.</li>
+		    <li>Az alkalmazás példányosítja a kért kontrollert, hogy a továbbiakban kezelje a felhasználói kérést. A kontroller meghatározza, hogy a `show` tevékenység a kontroller osztályának `actionShow` metódusára vonatkozik. Ezek után a tevékenységhez kapcsolódó szűrőket hoz létre (pl.: hozzáférés ellenőrzés, benchmarking). A tevékenység végrehajtódik, ha a szűrők ezt engedélyezik.</li>
+		    <li>A tevékenység beolvassa az adatbázisból az `1`-es ID-jű `Post` modell-t.</li>
+		    <li>A tevékenység lefordítja a `show` nevű nézet-et a megadott `Post` modellel.</li>
+		    <li>A nézet kiolvassa és megjeleníti a `Post` modell tulajdonságait.</li>
+		    <li>A nézet végrehajt néhány kütyü-t.</li>
+		    <li>A nézetfordítási eredmény beillesztésre kerül az elrendezés-be.</li>
+		    <li>A tevékenység befejezi a nézet fordítást és az eredményt megjeleníti a felhasználónak.</li>
+		</ol>
+		<h2>Forrás</h2>
+		<a href="http://yiihun.blogspot.hu/2011/03/mvc-model-view-controller-avagy-modell.html">http://yiihun.blogspot.hu/2011/03/mvc-model-view-controller-avagy-modell.html</a>
+	    </div>
+	</div>
+	<div id="footer"><p>Copyright © 2013 Fábián 'tyXon' Tamás</p></div>
+    
+
+<div id="lightboxOverlay" style="display: none;"></div><div id="lightbox" style="display: none;"><div class="lb-outerContainer"><div class="lb-container"><img class="lb-image"><div class="lb-nav"><a class="lb-prev"></a><a class="lb-next"></a></div><div class="lb-loader"><a class="lb-cancel"><img src="./Model-View-Controller_files/loading.gif"></a></div></div></div><div class="lb-dataContainer"><div class="lb-data"><div class="lb-details"><span class="lb-caption"></span><span class="lb-number"></span></div><div class="lb-closeContainer"><a class="lb-close"><img src="./Model-View-Controller_files/close.png"></a></div></div></div></div></body></html>
