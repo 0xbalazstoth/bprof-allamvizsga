@@ -36,7 +36,7 @@
         public string OperationZ => "Subsystem2: Fire!\n";
     }
 
-    class Client
+    class ClientFacade
     {
         public static void ClientCode(Facade facade)
         {
