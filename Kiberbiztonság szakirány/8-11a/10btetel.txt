@@ -1,0 +1,43 @@
+﻿10,b Mutassa be a biztonság tervezési elveit! Határozza meg az információbiztonsági célok
+elérésére használható intézkedés típusokat, adjon példát ezekre intézményi környezetben!
+
+
+1. Tervezés
+----->cég biztonsági politikájának való megfelelés--->követelmények megfogalmazása
+----->alapértelmezés: valaki valamihez nem férhet hozzá
+----->felhasználó barát környezet
+----->superuser, superviser =teljes hatalommal bíró rendszergazda kerülése--->modulokra bontás
+----->költégek, kockázatok felmérése
+
+
+Legfontosabb nézőpontok:
+a, központi vírusvédelem
+b, virtuális magánhálózatok (VPN) konfigurálása
+c, megfelelő jogosultságkezelés (hitelesítés, azonosítás)
+d, tartalomszűrés (dokumentálás, logolás)
+d, tűzfalak
+e, Behatolás detektáló rendszerek (intrusion-detection)
+f, felhasználó és hozzáférés menedzsment
+g, korszerű adatmentés
+
+
+2, hálózat védelem
+--->támadók célja: információ szerzés, illetéktelen hozzáférés, szolgáltatások megbénítása, rendszer feltörése, rosszindulatú programok bejuttatása
+--->aktív és passzív támadások: IP Spoofing, Smurf, Syn flood, Xmas/Ymas==>routerek ellen----> védekezés: ACL, tűzfalakkal csomagszűrés, RIP protokol helyettOSPF
+                                                           ARP Poisoning, ICMP redirect                   ==>switchek ellen---->védekezés: MAC címek statikus beállítása a portokra
+
+3, felhasználók védelme
+Legnagyobb probléma=JELSZAVAK
+-->erős jelszó megkötése(több karakter, kis-nagybetű, számok, speciális karakterek)
+-->Kerberos, LDAP, NIS
+-->jelszavakat védett fájlban tároljuk
+-->jelszavak titkos kezelése (nem írjuk fel publkus cetlire)
+
+4, Szerverek védelme
+-->folyamatos vizsgálat (rajta futó programok ,hozzáférések naplózása
+-->tűzfalak használata==>alapértelezetten portok tiltása
+-->naplózás->külön partícióra, megelelően tároljuk
+-->fájlrendszer megfelelő kialakítása(jogosultások rendes kezelése-rejtett mappák, nem adunk mindenkinek írási jogot
+-->külön szerverek a szolgálatásoknak (FTP, DNS, web)
+-->virtualízáció
+-->biztonsági frissítések és adatmentések-->adatmentések megfelelő tárolása

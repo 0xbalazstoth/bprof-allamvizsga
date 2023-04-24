@@ -1,0 +1,38 @@
+14.a Ismertesse a 2. (adatkapcsolati) rétegbeli hálózati támadások kivédésének módjait!
+
+-L2 támadások:
+	-Spanning Tree Protocol (STP) Attacks
+	-Address Resolution Protocol (ARP) Attacks
+	-Media Access Controll (MAC) Spoofing
+	-Content Addressable Memory (CAM) Table Attacks
+	-VLAN Hopping
+	-DHCP Spoofing
+
+-Spanning Tree Protocol (STP) Attacks elleni védekezés:
+	-BPDU Guard
+	-Root Guard
+	-Loop Guard
+
+-Address Resolution Protocol (ARP) Attacks elleni védekezés:
+	-Dynamic ARP Inspection (DAI) használata
+	-DHCP Snooping validálja
+
+-Media Access Controll (MAC) Spoofing elleni védekezés:
+	-Port Secutiry: a port nem továbbít olyan csomagokat, amelyek forráscímei nem tartoznak a meghatározott címek csoportjába
+	-Megengedett MAC-címek számának korlátozása egy porton
+
+-Content Addressable Memory (CAM) Table Attacks elleni védekezés:
+	-Port Security
+
+-VLAN Hopping elleni védekezés:
+	-DTP (automatikus trunk) negotiation letiltása nem trunk portokon (switchport mode access)
+	-DTP (automatikus trunk) negotiation letiltása a trunk portokon (switchport non-negotiate)
+	-Nem használt portok letiltása és külön VLAN-ba helyezése
+	-Trunk port engedélyezése manuálisan (switchport mode trunk)
+	-Natív VLAN VLAN 1-től eltérőre állítása (egy nem használt VLAN-ra), (switchport trunk native vlan {vlan_number})
+
+-DHCP Spoofing elleni védekezés:
+	-DHCP Snooping megbízható port beállítása
+	-DOT1x autentikáció
+	-Port security
+	-Nem használt portok lekapcsolása

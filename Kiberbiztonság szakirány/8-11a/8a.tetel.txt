@@ -1,0 +1,56 @@
+8.a Milyen állapottartó tuzfal konfigurálható a forgalomirányítókon? Mutassa be a muködés elvét,
+jellemzoit és a beállítás lépéseit	
+ Felho EA -04 Firewall -CBAC
+
+Firewall:
+Def: hálózatbiztonsági eszköz, szoftveres és hardvers megvalósítás, hálózati forgalmat ellenoriz, szabályrendszer alapján
+Cél:belso, privát hálózatvédelme->csak más védelmi rendszerekkel együtt hatékony->A logos tervezést igényel
+Tuzfal:preventív védelmi eszköz
+
+//Access Control List: 1.generációs tuzfal, hálózati és szállítási réteg alkalmazza
+
+CBAC(context-based access control)
+ Def:Naplózás, értesítés (audits and alerts)
+	Adminisztrátor által konfigutrált protokollok mentén szur
+		Csak routerenen áthaladt csomagokat szur
+	Muködése->állapot felmérés: ACL-t tárol, h engdélyezhesse a csomag tovább 	haladását, ha a kliens által lezáródik a megfigyelés, akk eldobja az állapot és 		ACL hozzáférést is
+	Képes: TCP csatlakozás setup monitorozására, TCP szekcencia szám lekövetésére, UDP 	szekció információ monitorozására, megvizsgálja a DNS kéréseit és válaszait, 	megvizsgálja az általános ICMP üzenet típusokat, támogatja a többszörs 	csatlakozásra válaszoló applikációkat, beágyazott címek vizsgálata, Applikáció 	réteg információinak vizsgálata
+Funkció: 
+	Állapottartó szurés (stateful packet filtering)
+		Vizsgálata információk mentén->hálózati réteg, szállítási 	réteg, alkalmazási réteg
+		Célja:megállapítsa a viszonyok állapotát
+
+	Forgalom figyelés, vizsgálat (traffic inspection)
+		Figyeli: SYN flood attacks, TCP
+		sorszámozást
+		Célja:gyanúsakat eldobja
+
+	Behatolás érzékelés (Intrusion detection) 
+		Vizsgál: syslog üzeneteket
+		Célja:Szur->smtp támadások, SYN flood attacks, eldob->riasztás és 				értesítés küld a rendszernek 
+	Firewall áltla megfigyelt küszöbértékek a TCP alapú DoS támadások elkerülése 	véget:
+	• A félig megnyitott TCP kacsolatok száma
+	• A félig megnyitott TCP kacsolatok száma adott intervallumban
+	• A félig megnyitott TCP kacsolatok száma egy adott host-tól
+
+Állapot tábla:
+	TCP, UDP és ICMP kapcsolatokról információt tárol->dinamikus ACL-t hoz létre a 		visszajövo csomagok számára
+ 	Nyílásokat hoz létre-> bokkolt forgalmat beengedi
+
+	Az állapottábla automatikusan frissül a forgalom áramlásának
+	megfeleloen
+	Hasonlóan visszaható az ACL-el is
+
+Konfigurálása:
+	1.lépés: Interfész kiválasztása(belso interfész)
+	Célja:viszony felépítés
+	
+	2. lépés: ACL konfigurálás az interfészen(forgalom engedélyezés)
+		Standard:internal network to external network mindent vagy external 		to internal semmit
+		Forgalom ammi kell a CBAC-nek
+		Implicit deny to explicit deny – naplózás miatt
+
+	3. lépés: Inspection rule a vizsgált forgalomra
+
+	4. lépés: Alkalmazás a megfelelo interfészen
+	

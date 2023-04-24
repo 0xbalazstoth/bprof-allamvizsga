@@ -1,0 +1,45 @@
+﻿8.b Ismertesse egy általános célú, több belső és külső szolgáltatást nyújtó Windows hálózati
+kiszolgáló biztonsági konfigurációs (hardening) lehetőségeit intézményi környezetben!
+
+
+	1. Fizikai Védelem
+	- Szervertelem
+		○ Zárt helyiség, ellenőrzött bejutás
+		○ Folyamatos áramellátás biztosítása
+			§ PDU, UPS
+		○ Megfelelő hőmérséklet biztosítása, monitorozása
+	- Erős BIOS jelszó beállítása
+	2. Hálózati védelem
+	- Tűzfal megfelelő beállítása
+	- Távoli eléréshez VPN kiépítése
+		○ Tanúsítványok megkövetelése
+	3. Vírusvédelem
+	- Vírusirtó szoftver telepítése
+		○ Szoftver adatbázisának frissítése
+	4. AD védelem
+	- Telepítésnél a helyreállítási jelszó tárolva legyen
+	- Csak arra jogosult személy léphet be a kiszolgálókra
+		○ Erős jelszó megkövetelése, havonta csere
+			§ Group Policy-val jelszóházirend megkövetelése
+		○ Tanúsítványok érvényessége
+	- A user szerepkörök szabályozása
+		○ Belső tevékenység szabályozása, ki-mihez férhet hozzá
+		○ Állomány hozzáférés szabályozás
+			§ OU, Group és Group Policy használata
+	5. Frissítések kezelése
+	- Havi Microsoft patchek-kel kapcsolatos problémák átnézése blogokon
+	- WSUS-ból először teszt szerverekre kiküldés
+	- Teszt környezet után kiküldés az éles környezetre
+	6. Mentések
+	- Mentőszoftverben (Veeam, Veritas) a napi/heti mentések beállítása
+		○ Full, duplicate, incremental mentések
+	- Szalagok/lemezek kihasználtságának mutatása, újraírhatóság
+	- Esetleg mentési riport küldés beállítás
+	
+	7. Központi loggyűjtés a tevékenységekről
+		○ kategorizáció
+	- Monitoring rendszer kialakítása
+		○ CPU,RAM,DISK terheltség
+		○ Service-k állapota
+		○ Riasztási küszöb beállítása
+
