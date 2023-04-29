@@ -25,3 +25,9 @@
 
 ### Proxy
 - https://www.youtube.com/watch?v=m0aXyRDEQqU
+
+### Decorator
+- https://www.youtube.com/watch?v=6rTnCkdbJA4
+
+### Flyweight
+- https://www.youtube.com/watch?v=XxOFsO-Xw8k
