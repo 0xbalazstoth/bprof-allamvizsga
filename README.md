@@ -16,6 +16,6 @@
 ### State
 - https://www.youtube.com/watch?v=rYmVpqiGL14
 
-## **Structural design pattern**
+## **Structural design patternek**
 ### Composite
 - https://www.youtube.com/watch?v=UsynwPeipb8
