@@ -22,3 +22,6 @@
 
 ### Facade
 - https://www.youtube.com/watch?v=xzpp5_ak8Hg
+
+### Proxy
+- https://www.youtube.com/watch?v=m0aXyRDEQqU
