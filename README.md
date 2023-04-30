@@ -16,6 +16,30 @@
 ### State
 - https://www.youtube.com/watch?v=rYmVpqiGL14
 
-## **Structural design pattern**
+### Strategy
+- https://www.youtube.com/watch?v=25qf3VkAlis
+
+### Template (method)
+- https://www.youtube.com/watch?v=mcc4XQHpVC8
+
+## **Structural design patternek**
 ### Composite
 - https://www.youtube.com/watch?v=UsynwPeipb8
+
+### Facade
+- https://www.youtube.com/watch?v=xzpp5_ak8Hg
+
+### Proxy
+- https://www.youtube.com/watch?v=m0aXyRDEQqU
+
+### Decorator
+- https://www.youtube.com/watch?v=6rTnCkdbJA4
+
+### Flyweight
+- https://www.youtube.com/watch?v=XxOFsO-Xw8k
+
+### Adapter
+- https://www.youtube.com/watch?v=9ZFN8DrvcYA
+
+### Bridge
+- https://www.youtube.com/watch?v=ECBimbOaPs0
