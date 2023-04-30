@@ -40,3 +40,6 @@
 
 ### Adapter
 - https://www.youtube.com/watch?v=9ZFN8DrvcYA
+
+### Bridge
+- https://www.youtube.com/watch?v=ECBimbOaPs0
