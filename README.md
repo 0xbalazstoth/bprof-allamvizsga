@@ -16,6 +16,9 @@
 ### State
 - https://www.youtube.com/watch?v=rYmVpqiGL14
 
+### Strategy
+- https://www.youtube.com/watch?v=25qf3VkAlis
+
 ## **Structural design patternek**
 ### Composite
 - https://www.youtube.com/watch?v=UsynwPeipb8
