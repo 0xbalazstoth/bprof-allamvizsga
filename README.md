@@ -19,6 +19,9 @@
 ### Strategy
 - https://www.youtube.com/watch?v=25qf3VkAlis
 
+### Template (method)
+- https://www.youtube.com/watch?v=mcc4XQHpVC8
+
 ## **Structural design patternek**
 ### Composite
 - https://www.youtube.com/watch?v=UsynwPeipb8
