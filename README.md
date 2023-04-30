@@ -37,3 +37,6 @@
 
 ### Flyweight
 - https://www.youtube.com/watch?v=XxOFsO-Xw8k
+
+### Adapter
+- https://www.youtube.com/watch?v=9ZFN8DrvcYA
