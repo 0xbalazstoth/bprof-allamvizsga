@@ -43,3 +43,7 @@
 
 ### Bridge
 - https://www.youtube.com/watch?v=ECBimbOaPs0
+
+## **Creational design patternek**
+### Factory és Abstract Factory
+- https://www.youtube.com/watch?v=xN7EFHU_rXA
