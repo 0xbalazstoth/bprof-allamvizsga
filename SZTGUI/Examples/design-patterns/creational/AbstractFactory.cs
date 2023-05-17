@@ -1,92 +1,84 @@
+// Abstract Factory
+// Kisebb Factory-k õs Factory-je
+// Elõnye, hogy elszigeteli a konkrét osztályokat és elõsegíti a "termékek"/product-ok konzisztenciáját
+// Hátránya, hogy új kisebb factory hozzáadásához módosítani kell az egész Abstract Factory hierarchiát, mert az interfész rögzíti a létrehozható "termékeket"
+
 void Main()
 {
-	AbstractFactory factory1 = new ConcreteFactory1();
-	Client client1 = new Client(factory1);
-	client1.Run();
-	
-	AbstractFactory factory2 = new ConcreteFactory2();
-	Client client2 = new Client(factory2);
-	client2.Run();
+    var a = LanguageFactory.HelloWorld("EN");
+
+    System.Console.WriteLine(a.Text);
 }
 
-abstract class AbstractFactory
+// Factories
+class Language
 {
-	public abstract AbstractProductA CreateProductA();
-	public abstract AbstractProductB CreateProductB();
+    public string Text { get; set; }
 }
 
-class ConcreteFactory1 : AbstractFactory
+// Interfész segítségével "fogjuk" össze az összes kisebb factory-t,
+// mert így tudunk több típusú factory-t eltárolni majd a Dictionary-be
+interface IFactory
 {
-	public override AbstractProductA CreateProductA()
-	{
-		return new ProductA1();
-	}
-	
-	public override AbstractProductB CreateProductB()
-	{
-		return new ProductB1();
-	}
+    Language HelloWorld(string text);
 }
 
-class ConcreteFactory2 : AbstractFactory
+// Kisebb factory-k
+class HungarianFactory : IFactory
 {
-	public override AbstractProductA CreateProductA()
-	{
-		return new ProductA2();	
-	}
-	
-	public override AbstractProductB CreateProductB()
-	{
-		return new ProductB2();
-	}
+    public Language HelloWorld(string language)
+    {
+        return new Language()
+        {
+            Text = "Helló Világ! - " + language
+        };
+    }
 }
 
-abstract class AbstractProductA {}
-
-abstract class AbstractProductB
+class EnglishFactory : IFactory
 {
-	public abstract void Interact(AbstractProductA a);	
+    public Language HelloWorld(string language)
+    {
+        return new Language()
+        {
+            Text = "Hello World! - " + language
+        };
+    }
 }
 
-class ProductA1 : AbstractProductA { }
-
-class ProductB1 : AbstractProductB
+class FrenchFactory : IFactory
 {
-	public override void Interact(AbstractProductA a)
-	{
-		var item = this.GetType().Name;
-		var aItem = a.GetType().Name;
-		
-		// item interacts with aItem
-	}
+    public Language HelloWorld(string language)
+    {
+        return new Language()
+        {
+            Text = "Bonjour le monde! - " + language
+        };
+    }
 }
 
-class ProductA2 : AbstractProductA { }
-
-class ProductB2 : AbstractProductB
+// Itt van az õs factory, ami összefogja az összes (kisebb) factory-kat.
+// Megoldása lehet Dictionary-vel vagy reflexióval (minél több factory, annál lassabb)
+// IF elágazások helyett string alapján hajtódjon végre a factory
+static class LanguageFactory
 {
-	public override void Interact(AbstractProductA a)
-	{
-		var item = this.GetType().Name;
-		var aItem = a.GetType().Name;
-		
-		// item interacts with aItem
-	}
-}
+    static Dictionary<string, IFactory> factories; // Összefogja a factory-ket
 
-class Client
-{
-	private AbstractProductA abstractProductA;
-	private AbstractProductB abstractProductB;
-	
-	public Client(AbstractFactory factory)
-	{
-		abstractProductB = factory.CreateProductB();
-		abstractProductA = factory.CreateProductA();
-	}
-	
-	public void Run()
-	{
-		abstractProductB.Interact(abstractProductA);
-	}
+    static LanguageFactory()
+    {
+        // Factory-kat eltároljuk egy Dictionary-be
+        factories = new Dictionary<string, IFactory>();
+        factories.Add("HU", new HungarianFactory());
+        factories.Add("EN", new EnglishFactory());
+        factories.Add("FR", new FrenchFactory());
+    }
+
+    static public Language HelloWorld(string text)
+    {
+        // Itt döntjük el, hogy melyik factory fusson le "text" alapján
+        var factory = factories[text];
+
+        // Factory által megkapott eredményt visszaadjuk, amit a kliens kódban felhasználunk
+        return factory.HelloWorld(text);
+    }
 }

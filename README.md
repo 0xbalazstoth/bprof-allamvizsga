@@ -2,6 +2,9 @@
 ## **IAM**
 - https://www.youtube.com/watch?v=aNj36g7fSsU
 
+## ISO 9001 Kockázatkezelés
+- https://www.youtube.com/watch?v=xTwGPxrlq3k
+
 <hr>
 
 # SZTGUI
