@@ -5,6 +5,12 @@
 ## ISO 9001 Kockázatkezelés
 - https://www.youtube.com/watch?v=xTwGPxrlq3k
 
+## Határforgalomirányító
+- https://www.youtube.com/watch?v=-pYf2NqrL_I
+
+## IDS/IPS
+- https://www.youtube.com/watch?v=_gHMkEKGwBM
+
 <hr>
 
 # SZTGUI
