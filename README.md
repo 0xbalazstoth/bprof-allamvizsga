@@ -1,15 +1,18 @@
 # Kiber
-## **IAM**
+## IAM
 - https://www.youtube.com/watch?v=aNj36g7fSsU
 
 ## ISO 9001 Kockázatkezelés
 - https://www.youtube.com/watch?v=xTwGPxrlq3k
 
-## Határforgalomirányító
+## Border router
 - https://www.youtube.com/watch?v=-pYf2NqrL_I
 
 ## IDS/IPS
 - https://www.youtube.com/watch?v=_gHMkEKGwBM
+
+## Firewall & Next-Generation Firewalls
+- https://www.youtube.com/watch?v=IWNfb4a1ay0&t=47s
 
 <hr>
 
