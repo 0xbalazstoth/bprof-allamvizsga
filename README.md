@@ -14,6 +14,13 @@
 ## Firewall & Next-Generation Firewalls
 - https://www.youtube.com/watch?v=IWNfb4a1ay0&t=47s
 
+## Firewall topologies
+- https://www.youtube.com/watch?v=kOrPTy53yoY
+- https://networklessons.com/cisco/ccna-routing-switching-icnd2-200-105/singledual-homed-and-multi-homed-designs?utm_source=youtube&utm_medium=social&utm_campaign=Single/Dual%20Homed%20and%20Multi-homed%20Designs
+
+## VPN
+- https://www.youtube.com/watch?v=CWy3x3Wux6o
+
 <hr>
 
 # SZTGUI
