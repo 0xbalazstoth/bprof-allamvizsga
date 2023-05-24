@@ -21,6 +21,9 @@
 ## VPN
 - https://www.youtube.com/watch?v=CWy3x3Wux6o
 
+## NAT: Inside/Outside Local/Global IP Addresses
+- https://www.youtube.com/watch?v=m9YQ3MImw7U
+
 <hr>
 
 # SZTGUI
