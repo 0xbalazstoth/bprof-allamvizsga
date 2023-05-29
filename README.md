@@ -30,6 +30,10 @@
 ## Cryptography
 - https://www.youtube.com/watch?v=NuyzuNBFWxQ
 
+## IT Audit
+- https://www.youtube.com/watch?v=X893XEy1Euo&pp=ygUIaXQgYXVkaXQ%3D
+- https://www.youtube.com/watch?v=XjVmtGVS3ZU&t=905s
+
 <hr>
 
 # SZTGUI
