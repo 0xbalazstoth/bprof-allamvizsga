@@ -34,6 +34,27 @@
 - https://www.youtube.com/watch?v=X893XEy1Euo&pp=ygUIaXQgYXVkaXQ%3D
 - https://www.youtube.com/watch?v=XjVmtGVS3ZU&t=905s
 
+## CAM Table Overflow Attack
+- https://www.youtube.com/watch?v=E9QeBv712Fg
+
+## VLAN Attack: VLAN Hopping
+- https://www.youtube.com/watch?v=12yViXDKm3k
+
+## STP Attack
+- https://www.youtube.com/watch?v=weY3wv0NwqA
+
+## MAC Address Spoofing Attack
+- https://youtu.be/aIXmOuqTAAI?t=251
+
+## DHCP starvation attack:
+- https://www.youtube.com/watch?v=jiSl89al4nI
+
+## ARP Spoofing
+- https://www.youtube.com/watch?v=8SIP36Fym7U
+
+## ARP poisoning
+- 
+
 <hr>
 
 # SZTGUI
