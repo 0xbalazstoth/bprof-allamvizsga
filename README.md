@@ -52,9 +52,6 @@
 ## ARP Spoofing
 - https://www.youtube.com/watch?v=8SIP36Fym7U
 
-## ARP poisoning
-- 
-
 <hr>
 
 # SZTGUI
